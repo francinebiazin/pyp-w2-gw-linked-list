@@ -88,11 +88,11 @@ class LinkedList(AbstractLinkedList):
         return counter
 
     def pop(self, index=None):
-        if (len(self) == 0) or (index >= len(self)):    # Checking the LinkedList is not empty
-            raise IndexError                            # and that the index given is valid
-        
         if index is None:                               # If no index is given, assign it the position of
             index = self.count() - 1                    # the last element
+        
+        if (len(self) == 0) or (index >= len(self)):    # Checking the LinkedList is not empty
+            raise IndexError                            # and that the index given is valid
         
         if index == 0:                                  # Removing the first element
             elem = self.start.elem                      # Capturing the value of the first element
