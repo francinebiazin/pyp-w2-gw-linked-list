@@ -24,7 +24,7 @@ class LinkedList(AbstractLinkedList):
 
     def __iter__(self):                 # Building the LinkedList by calling up the Node references until 
         node = self.start               # the next attribute is None (end of list)
-        while node != None:
+        while node:
             yield node.elem
             node = node.next
         raise StopIteration
